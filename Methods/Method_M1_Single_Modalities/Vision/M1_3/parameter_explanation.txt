@@ -1,0 +1,5 @@
+Default: bs=16, epochs=100, lossfunction='mse', learningrate=1e-5, cudadevice='cuda', root_dir_path = './ChaLearn_First_Impression/
+
+just type in in console to access parameters and start file:
+
+python train_r2plus1.py --bs 4 --epochs 1 --root_dir_path C:/Users/jessi/Documents/Studium/ChaLearn_First_Impression/

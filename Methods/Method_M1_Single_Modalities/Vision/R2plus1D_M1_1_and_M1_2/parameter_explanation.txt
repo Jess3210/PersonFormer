@@ -1,0 +1,11 @@
+bs=32, epochs=1, lossfunction='mse', modelPretrained='34insta', deviceCuda='cuda', root_dir=r'/ChaLearn_First_Impression/test/', video_folder='test_video', frames_folder='test_frames', groundtruth_file='test_groundtruth/annotation_test.pkl'
+
+modelPretrained variations:
+'18kin'
+'34kin'
+'34insta'
+
+just type in in console to access parameters and start file:
+
+python inference_r2plus1Class.py --modelPretrained 18kin --root_dir C:/ChaLearn_First_Impression/test/
+
