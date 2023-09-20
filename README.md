@@ -1,15 +1,29 @@
 # PersonFormer - A Multimodal Video-based Personality Recognition System using Transformer
 
-In this master’s thesis, we developed a multimodal personality recognition system using person image, face image, scene image, audio, text modalities and metadata for the Big 5 personality trait recognition.
+In this master’s thesis, I developed a multimodal personality recognition system using person image, face image, scene image, audio, text modalities and metadata for the Big 5 personality trait recognition.
+
+<div class="row">
+    <img width="677" alt="image" src="https://github.com/Jess3210/PersonFormer/assets/77229288/b56fb7cb-c1dc-44e4-9edb-f20e2e5b7434" style="width:80%">
+  </div>
+<sup><strong>Figure 1</strong>: One-level fusion of scene, audio, text, person, face and
+metadata with R(2+1)D-34, VGGish, and BERT as backbones and Transformer encoder
+for the cross-modal interaction of the different modalities, and for the audio sequence
+processing. </sup>
 
 ## Description
 
-We train the single modalities as own methods to see the effect on personality recognition of every single modalities and show different fusion strategies, network architectures, and transferlearning/retraining/training from scratch of the model backbones. We, therefore, split the project into methods M1 - M7, starting with single modalities in M1. 
+Training of the single modalities as own methods to see the effect on personality recognition of every single modalities and show different fusion strategies, network architectures, and transferlearning/retraining/training from scratch of the model backbones. We, therefore, split the project into methods M1 - M7, starting with single modalities in M1. 
 
 Methods M2 and M3 contain variations of the fusion of the visual, audio, and textual stream. The methods in M4 show different late fusion variations of the trained methods M1 - M3 to reveal the influence of this fusion strategy on the performance of personality recognition. With the methods in M5, we describe the fusion of the visual modalities of person and face. We fuse the scene, audio, text, person, and face modality hierarchically in method M6 with different network settings by fusing the subnetworks from the previous methods M1, M2, and M3. The methods in M7 add metadata to the modalities, person, face, scene, text, and audio, from the previous methods, M1 and M5, on different levels and fuse the modalities hierarchically and on one level. 
 
 Our best performing method with a mean average accuracy of 0.9124 is M7.6 with a one-level fusion of all modalities and metadata, followed by M7.2 with a hierarchical fusion of all modalities and a mean average accuracy of 0.9035.
-
+  <div class="row">
+    <img width="675" alt="image" src="https://github.com/Jess3210/PersonFormer/assets/77229288/66112ad0-0745-4017-acdd-a0f09b3b14d4">
+  </div>
+  <sup><strong>Figure 2</strong>: Hierarchical fusion of (scene + audio + text + metadata)
++ (person + face + metadata) with R(2+1)D-34, VGGish, and BERT as backbones and
+Transformer encoder for the cross-modal interaction of the different modalities, and for
+the audio sequence processing. </sup>
 
 ## Getting Started
 Here, we see our folder structure. The "Data_Analysis" folder contains the scripts for data analysis of the results. In "Data_Preprocessing" folder, we can find the scripts for frame extractionn for datatype 1 and datatype 2, and the person and face extraction script for the images. "Methods" folder contains of the scripts for the developed methods, architectures, dataloader and metric scripts, training/validation/test pipeline for training the methods and doing inference. We also offer tables as overview of the different methods.
